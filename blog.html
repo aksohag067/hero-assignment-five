@@ -11,12 +11,13 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
     <main>
         <div class="navbar bg-amber-50 sticky top-0 z-50 px-4 md:px-20">
             <div class="navbar-start">
-              <button id="next-button" class="btn btn-active btn-accent">Home</button>
+              <button id="previous-button" class="btn btn-active btn-accent">Home</button>
             </div>
             <div class="navbar-center flex items-center justify-center">
               <img src="assets/logo.png" alt="" class="w-10 h-10" />
@@ -60,7 +61,12 @@
             </div>
           </div>
     </main>
-    
-
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("previous-button").addEventListener('click', function() {
+          window.history.back(); 
+        });
+      });
+    </script>
 </body>
 </html>

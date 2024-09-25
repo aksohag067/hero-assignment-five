@@ -7,7 +7,7 @@ function handleDonation(h2Id, inputId, totalId, donationAreaId) {
   const donationInput = document.getElementById(inputId).value;
   const donationAmount = parseFloat(donationInput);
 
-  if (donationAmount > 0) {
+  if (!isNaN(donationAmount) && donationAmount > 0) {
     currentAmount += donationAmount;
     document.getElementById(h2Id).innerText = `${currentAmount} BDT`;
 
